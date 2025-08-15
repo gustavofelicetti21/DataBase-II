@@ -5,7 +5,7 @@ namespace EFTest.Data
 {
     public static class DbInitializer
     {
-        public static void Initialize(SchoolContent context)
+        public static void Initialize(SchoolContext context)
         {
             context.Database.EnsureCreated();
 

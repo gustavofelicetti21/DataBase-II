@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<SchoolContent>(options =>
+builder.Services.AddDbContext<SchoolContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("Defaultconnection"))
     );
@@ -39,7 +39,7 @@ static void CreateDbIfNotExists(IHost host)
         var services = scope.ServiceProvider;
         try
         {
-            var context = services.GetRequiredService<SchoolContent>();
+            var context = services.GetRequiredService<SchoolContext>();
             DbInitializer.Initialize(context);
         }
         catch (Exception ex)

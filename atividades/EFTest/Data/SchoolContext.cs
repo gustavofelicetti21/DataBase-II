@@ -2,17 +2,20 @@
 using EFTest.Models;
 namespace EFTest.Data
 {
-    public class SchoolContent : DbContext
+    public class SchoolContext: DbContext
     {
-        public SchoolContent(DbContextOptions<SchoolContent> options) : base(options)
+        public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
         {
         }
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<StudentCourses> StudentCourses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Student>().ToTable("Student");
+            modelBuilder.Entity<Course>().ToTable("Course");
         }
     }
 }
