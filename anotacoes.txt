@@ -1,3 +1,9 @@
 ORM - OBJECT RELATIONAL MAPPING = relaciona diretamente os objetos(back-end) com as entidades(banco), você consegue abstrair os dados do banco diretamente no código. Ele reduz a complexibilidade dos códigos na camada de acesso a dados, simplificando as consultas que são traduzidas pelo ORM. Se você tiver uma tabela clientes no banco, ele faz uma classe cliente no código.
 
 Entity Framework - framework da microsoft que possibilita o uso da ORM em aplicações APS.NET CORE
+
+dotnet tool install --global dotnet-ef
+
+dotnet ef migrations add Initial
+
+dotnet ef database update
