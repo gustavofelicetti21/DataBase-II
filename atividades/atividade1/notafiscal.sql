@@ -77,8 +77,3 @@ insert into item_nota_fiscal(nro_nota,cod_produto, qtd_produto, vl_preco, vl_tot
 values(4, 2, 2, 420.00, 840.00);
 insert into item_nota_fiscal(nro_nota,cod_produto, qtd_produto, vl_preco, vl_total)
 values(4, 3, 10, 800.00, 8000.00);
-
-select * from produto; 
-select * from nota_fiscal;
-select * from item_nota_fiscal;
-select * from item_nota_fiscal where nro_nota=1;

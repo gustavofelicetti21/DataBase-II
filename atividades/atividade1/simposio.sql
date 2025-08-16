@@ -1,5 +1,5 @@
 CREATE DATABASE Simposio;
-
+go
 USE Simposio;
 
 CREATE TABLE Pessoa (
