@@ -1,8 +1,32 @@
-﻿@{
+﻿@model ICollection<Greenhouse.Models.Plants>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Casa Verde</h1>
+    <table class="table table-responsive table-responsive table-hover table-striped table-dark">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Planta</th>
+                <th>Sensor Value</th>
+                <th>Sensor Event</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.Id</td>
+                    <td>@p.PlantName</td>
+                    <td>@p.SensorValue</td>
+                    <td>@p.Sensor_Event.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
